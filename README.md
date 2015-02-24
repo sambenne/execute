@@ -6,10 +6,11 @@ This project is just a simple PHP Script Execution.
 ```php
 <?php
 
-use SamBenne\Execute;
+use SamBenne\Execute\Timer;
 
-Execute::start('test');
+$timer = Timer::getInstance(;
+$timer->start('test');
 
-$myTime = Execute::output('test');
+$myTime = $timer->output('test');
 
 // <b>Total Execution Time:</b> 0.4 Secs
