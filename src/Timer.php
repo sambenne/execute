@@ -8,10 +8,24 @@
     class Timer
     {
         /**
+         * @var \SamBenne\Execute\Timer|null
+         */
+        protected static $instance = null;
+
+        /**
          * @var array $timers
          */
         private static $timers = [];
-        
+
+        public static function getInstance()
+        {
+            if (!isset(static::$instance)) {
+                static::$instance = new static();
+            }
+
+            return static::$instance;
+        }
+
         /**
          * Start Timer
          *
