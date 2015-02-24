@@ -31,7 +31,7 @@
          *
          * @param string $id
          */
-        public static function start( $id )
+        public static function start( $id = "default")
         {
             self::$timers[$id] = [ 'start' => microtime(TRUE) ];
         }
@@ -41,7 +41,7 @@
          *
          * @param string $id
          */
-        public static function stop( $id )
+        public static function stop( $id = "default")
         {
             self::$timers[$id]['stop'] = microtime(TRUE);
         }
@@ -55,7 +55,7 @@
          *
          * @return string
          */
-        public static function output( $id )
+        public static function output( $id = "default")
         {
             self::stop($id);
             $timer = self::$timers[$id];
