@@ -60,8 +60,37 @@
             self::stop($id);
             $timer = self::$timers[$id];
 
-            $executionTime = ($timer['stop'] - $timer['start']);
+            $timestamp = self::calculate($timer);
 
-            return '<b>Total Execution Time:</b> '.$executionTime.' Secs';
+            return 'Executed in: '.$timestamp;
+        }
+
+        /**
+         * Calculates a human friendly time stamp.
+         *
+         * @param array $timer
+         *
+         * @return string
+         */
+        private static function calculate($timer)
+        {
+            $seconds = ($timer['stop'] - $timer['start']);
+
+            // First we calculate milliseconds and seconds
+            $milliseconds = str_replace("0.", '', $seconds - floor($seconds));
+            $seconds = $seconds % 3600;
+
+            // If seconds is more than a minute
+            if ($seconds >= 60) {
+                return gmdate('i:s', $seconds).' min';
+            } elseif ($seconds < 60 && $seconds != 0) {
+                $time = gmdate('s', $seconds);
+                if ($milliseconds) {
+                    $time .= '.'.$milliseconds;
+                }
+                return $time.' sec';
+            } else {
+                return '0.'.round($milliseconds, 2).' sec';
+            }
         }
     }
