@@ -3,8 +3,13 @@ This project is just a simple PHP Script Execution.
 
 ## Usage
 
-    \Execute\Execute::start('test');
+```php
+<?php
 
-    $myTime = \Execute\Execute::output('test');
+use SamBenne\Execute;
 
-    // <b>Total Execution Time:</b> 0.4 Secs
+Execute::start('test');
+
+$myTime = Execute::output('test');
+
+// <b>Total Execution Time:</b> 0.4 Secs
