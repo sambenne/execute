@@ -1,0 +1,12 @@
+{
+    "name": "sbennett/execute",
+    "description": "This is a simple project to record script execution",
+    "authors": [
+        {
+            "name": "Sam Bennett",
+            "email": "bennettsst@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
