@@ -8,7 +8,7 @@ This project is just a simple PHP Script Execution.
 
 use SamBenne\Execute\Timer;
 
-$timer = Timer::getInstance(;
+$timer = Timer::getInstance();
 $timer->start('test');
 
 $myTime = $timer->output('test');

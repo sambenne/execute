@@ -1,10 +1,12 @@
 <?php
+    error_reporting( E_ALL );
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    use Execute\Timer;
+    use SamBenne\Execute\Timer;
 
-    Timer::start('test');
+    $timer = Timer::getInstance();
+    $timer->start('test');
 
     sleep(3);
 
-    echo Timer::output('test');
+    echo $timer->output('test');
