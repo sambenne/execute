@@ -5,8 +5,13 @@
         {
             "name": "Sam Bennett",
             "email": "bennettsst@gmail.com"
+        },
+        {
+            "name": "James Brooks",
+            "email": "ukjbrooks@gmail.com"
         }
     ],
+    "license": "GPL-2.0",
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0"

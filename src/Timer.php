@@ -17,6 +17,11 @@
          */
         private static $timers = [];
 
+        /**
+         * Get Instance
+         *
+         * @return Timer
+         */
         public static function getInstance()
         {
             if (!isset(static::$instance)) {
