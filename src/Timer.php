@@ -31,7 +31,7 @@
          *
          * @param string $id
          */
-        public static function start( $id = "default")
+        public static function start( $id = 'default')
         {
             self::$timers[$id] = [ 'start' => microtime(TRUE) ];
         }
@@ -41,7 +41,7 @@
          *
          * @param string $id
          */
-        public static function stop( $id = "default")
+        public static function stop( $id = 'default')
         {
             self::$timers[$id]['stop'] = microtime(TRUE);
         }
@@ -55,7 +55,7 @@
          *
          * @return string
          */
-        public static function output( $id = "default")
+        public static function output( $id = 'default')
         {
             self::stop($id);
             $timer = self::$timers[$id];
@@ -63,5 +63,24 @@
             $executionTime = ($timer['stop'] - $timer['start']);
 
             return '<b>Total Execution Time:</b> '.$executionTime.' Secs';
+        }
+
+        /**
+         * Output Time in Minutes
+         *
+         * This will call self::stop
+         *
+         * @param string $id
+         *
+         * @return string
+         */
+        public static function outputMinutes( $id = 'default')
+        {
+            self::stop($id);
+            $timer = self::$timers[$id];
+
+            $executionTime = ($timer['stop'] - $timer['start']) / 60;
+
+            return '<b>Total Execution Time:</b> '.$executionTime.' mins';
         }
     }
