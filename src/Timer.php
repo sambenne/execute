@@ -1,5 +1,5 @@
 <?php
-    namespace Execute;
+    namespace SamBenne\Execute;
 
     /**
      * Class Timer
@@ -11,6 +11,7 @@
          * @var array $timers
          */
         private static $timers = [];
+        
         /**
          * Start Timer
          *
