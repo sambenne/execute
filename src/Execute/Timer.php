@@ -2,10 +2,10 @@
     namespace Execute;
 
     /**
-     * Class Execute
+     * Class Timer
      * @package Execute
      */
-    class Execute
+    class Timer
     {
         /**
          * @var array $timers
@@ -28,7 +28,7 @@
          */
         public static function stop( $id )
         {
-            self::$timers[$id] = [ 'stop' => microtime(TRUE) ];
+            self::$timers[$id]['stop'] = microtime(TRUE);
         }
 
         /**

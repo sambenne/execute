@@ -1,10 +1,10 @@
 <?php
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    use Execute\Execute;
+    use Execute\Timer;
 
-    Execute::start('test');
+    Timer::start('test');
 
     sleep(3);
 
-    echo Execute::output('test');
+    echo Timer::output('test');
