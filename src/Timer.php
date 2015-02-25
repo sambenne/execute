@@ -20,7 +20,7 @@
         /**
          * Get Instance
          *
-         * @return Timer
+         * @return \SamBenne\Execute\Timer
          */
         public static function getInstance()
         {
