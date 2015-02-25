@@ -13,7 +13,7 @@
         protected static $instance = null;
 
         /**
-         * @var array $timers
+         * @var array
          */
         private static $timers = [];
 
