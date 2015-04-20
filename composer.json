@@ -1,6 +1,6 @@
 {
     "name": "sbennett/execute",
-    "description": "This is a simple project to record script execution",
+    "description": "This is a simple project to record script execution times.",
     "authors": [
         {
             "name": "Sam Bennett",
@@ -8,7 +8,7 @@
         },
         {
             "name": "James Brooks",
-            "email": "ukjbrooks@gmail.com"
+            "email": "jbrooksuk@me.com"
         }
     ],
     "license": "MIT",

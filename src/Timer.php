@@ -13,14 +13,14 @@
         protected static $instance = null;
 
         /**
-         * @var array $timers
+         * @var array
          */
         private static $timers = [];
 
         /**
          * Get Instance
          *
-         * @return Timer
+         * @return \SamBenne\Execute\Timer
          */
         public static function getInstance()
         {
